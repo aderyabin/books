@@ -1,0 +1,24 @@
+---
+layout: default
+title: aderyabin books
+---
+
+<div id='books' class='books'>
+  {% for post in site.posts %}
+    <div class='book'>
+      <div class='front'>
+        <img src="{{ site.url }}/covers/{{post.image}}"/>
+      </div>
+      <div class='back'>
+        <div class='content'>
+          <div class="meta-title">
+            <h2><a href="{{ post.id }}.html">{{ post.title }}</a></h2>
+          </div>
+          <div class="post-content">
+            <p>{{ post.author | strip_html | truncatewords: 100 }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

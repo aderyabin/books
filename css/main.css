@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Serif'), local('PTSerif-Regular'), url(http://themes.googleusercontent.com/static/fonts/ptserif/v5/zjBCKJs0bE-LvM0teIV5VHYhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+}
+
+body{
+  font-family: 'PT Serif';
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+header{
+  padding: 20px 0;
+  color: #777471;
+  border-bottom: 1px solid #eceae5;
+}
+
+header .container{
+  width: 200px;
+  margin: 0 auto;
+  font-size: 22px
+}
+
+header .container A{
+  color: #777471;
+  text-decoration: none;
+}
+
+header .container A:hover{
+  color: #000;
+  text-decoration: underline;
+}
+
+
+.books, .single_book{
+  padding-top: 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+  background: #fff;
+  /*box-shadow: 0px 5px 10px #333;*/
+}
+
+.single_book{
+  max-width: 950px;
+}
+
+.book{
+  margin: 10px 20px;
+}
+
+.book .front IMG{
+  width:210px;
+  box-shadow: 5px 5px 20px #333;
+  display: block;
+}
+
+.book .back{
+  top: 0px;
+  left: 0px;
+  width: 210px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  background-color: rgba(0,0,0,0.9);
+  color: #ccc;
+}
+
+.book .back .content{
+  padding: 0 15px;
+  margin-top: 40px;
+}
+
+.book .back .meta-title{
+  text-align: center;
+}
+
+.book .back .meta-title A{
+  color: #fff;
+  font-size: 20px;
+}
+
+.book .back .post-content{
+  text-align: center;
+  font-style: italic;
+  font-size: 16px
+}
+
+.book .back:hover {
+  display: block;
+  opacity: 1;
+}
+
+.single_book{
+  overflow: hidden;
+  clear: both;
+  padding: 30px 50px;
+}
+
+.single_book .wrapper{
+  float: left;
+  width: 100%
+}
+
+
+.single_book .left_side{
+  float: left;
+  margin-left: -100%;
+  width: 250px;
+}
+
+.single_book .left_side .cover IMG{
+  width: 210px;
+  display: block;
+  box-shadow: 0px 5px 10px #111;
+}
+
+.single_book .left_side .about{
+  margin-top: 30px;
+}
+
+.single_book .left_side .about .title h2{
+  font-size: 20px;
+  color: #151515;
+}
+
+.single_book .left_side .about .author h3{
+  font-weight: normal;
+  color: #959595;
+  font-size: 18px;
+}
+
+
+.single_book .main_side{
+  float: left;
+  margin-left: 300px;
+  /*width: 100%;*/
+}
+
+.single_book .main_side .description{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eceae5;
+
+}
+
+.single_book .main_side .content{
+  margin-top: 40px;
+}

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class='single_book'>
+  <div class='wrapper'>
+    <div class='main_side'>
+      <div class='description'>{{ page.description }}</div>
+      <div class='content'>{{ content }}</div>
+    </div>
+  </div>
+  <div class='left_side'>
+    <div class='cover'>
+      <img src="{{ site.baseurl }}/covers/{{page.image}}"/>
+    </div>
+    <div class='about'>
+      <div class='title'><h2>{{page.title}}</h2></div>
+      <div class='author'><h3>{{page.author}}</h3></div>
+    </div>
+  </div>
+</div>

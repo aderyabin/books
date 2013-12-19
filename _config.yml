@@ -1,0 +1,4 @@
+name: Библиотека
+markdown: redcarpet
+pygments: true
+baseurl: /books
