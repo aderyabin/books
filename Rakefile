@@ -34,3 +34,8 @@ def run(text, command, path = nil)
   command_with_path << command
   system command_with_path.join("; ")
 end
+
+desc "Start Server"
+task :server do
+  system "jekyll serve --baseurl ''"
+end
