@@ -11,15 +11,11 @@ task :deploy do
   run "Create new tmp", "mkdir #{tmp_path}"
   run "Git fetch", 'git fetch'
 
-  if `git branch -a`.include?("origin/#{gh_branch}")
-    run "Clone remote", "git clone -b #{gh_branch} #{url} #{tmp_path}"
-    run "Copy to tmp", "cp -r _site/  #{tmp_path}"
-  else
-    run "Copy to tmp", "cp -r _site/  #{tmp_path}"
-    run "Init git", "git init .", tmp_path
-    run "Add remote", "git remote add origin #{url}", tmp_path
-    run "Switch to #{gh_branch}", "git checkout -b #{gh_branch}", tmp_path
-  end
+  run "Copy to tmp", "cp -r _site/  #{tmp_path}"
+  run "Init git", "git init .", tmp_path
+  run "Add remote", "git remote add origin #{url}", tmp_path
+  run "Remove old branch", "git push origin :#{gh_branch}", tmp_path
+  run "Switch to #{gh_branch}", "git checkout -b #{gh_branch}", tmp_path
 
   run "Remove Rakefile", "rm Rakefile", tmp_path
   run "Git Add", "git add .", tmp_path
