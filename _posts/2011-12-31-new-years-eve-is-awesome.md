@@ -2,7 +2,6 @@
 layout: post
 title: "Проще"
 author: Мэтт Мадейро
-categories: минимализм
 tags:   []
 image: simpler.jpg
 description: |+
